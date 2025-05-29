@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">23.058s</div>
+<div class="counter">28.030s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,195 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard error</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Agendamiento de cita exitoso"></a>
+<h3 class="failures">Agendamiento de cita exitoso</h3>
+<span class="code">
+<pre>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1149)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$zQhD7zR8.performAs$accessor$qFx9JqUT(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:471)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:451)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:424)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:180)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:167)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:75)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$zQhD7zR8.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:171)
+	at com.katalon.herokuapp.tasks.AgendarCita.performAs(AgendarCita.java:22)
+	at com.katalon.herokuapp.tasks.AgendarCita$ByteBuddy$0rtLgLAM.performAs$accessor$D776zDGC(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:471)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:451)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:424)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:180)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:167)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:75)
+	at com.katalon.herokuapp.tasks.AgendarCita$ByteBuddy$0rtLgLAM.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:171)
+	at com.katalon.herokuapp.stepDefinitions.AgendarCitaStepDefinition.cuandoCompleteLosCamposDelFormularioDeAgendamientoDeCitasRealiceClicEnElBotonDeReservaDeCita(AgendarCitaStepDefinition.java:45)
+	at ✽.Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita(src/test/resources/features/agendarCita.feature:6)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.xpath: //td[@class='day' and text()='18'] to be enabled (tried for 5 second(s) with 100 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1146)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$zQhD7zR8.performAs$accessor$qFx9JqUT(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:471)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:451)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:424)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:180)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:167)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:75)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$zQhD7zR8.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:171)
+	at com.katalon.herokuapp.tasks.AgendarCita.performAs(AgendarCita.java:22)
+	at com.katalon.herokuapp.tasks.AgendarCita$ByteBuddy$0rtLgLAM.performAs$accessor$D776zDGC(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:471)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:451)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:424)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:180)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:167)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:75)
+	at com.katalon.herokuapp.tasks.AgendarCita$ByteBuddy$0rtLgLAM.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:171)
+	at com.katalon.herokuapp.stepDefinitions.AgendarCitaStepDefinition.cuandoCompleteLosCamposDelFormularioDeAgendamientoDeCitasRealiceClicEnElBotonDeReservaDeCita(AgendarCitaStepDefinition.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:31)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:25)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:37)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:40)
+	at cucumber.api.TestStep.executeStep(TestStep.java:102)
+	at cucumber.api.TestStep.run(TestStep.java:83)
+	at cucumber.api.TestCase.run(TestCase.java:58)
+	at cucumber.runner.Runner.runPickle(Runner.java:80)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:140)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:118)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:56)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:127)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[@class='day' and text()='18']&quot;}
+  (Session info: chrome=137.0.7151.56)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-IFP5J0M', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.56, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\LEIDYG~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52329}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 50907cd3d2bf7230f9da42625567bcc7
+*** Element info: {Using=xpath, value=//td[@class='day' and text()='18']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:222)
+	at net.serenitybdd.core.pages.WebElementResolverByLocator.resolveForDriver(WebElementResolverByLocator.java:18)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:221)
+	at net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:63)
+	at net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:55)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 98 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,26 +260,26 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Agendamiento de cita exitoso</td>
-<td class="success">23.058s</td>
-<td class="success">passed</td>
+<td class="failures">Agendamiento de cita exitoso</td>
+<td class="failures">28.030s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@60186936
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@338ed411
-may 23, 2024 9:26:09 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+may 29, 2025 4:50:37 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized --disable..., goog:chromeOptions: {args: [--start-maximized, --disable-popup-blocking, --ignore-certificate-errors], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
-Starting ChromeDriver 125.0.6422.76 (67dcf7562b8fb4ab0819135589e37a97bcc8942c-refs/branch-heads/6422@{#1086}) on port 8933
+Starting ChromeDriver 137.0.7151.55 (254bc711794d7ad269495f3d419a209935b78cad-refs/branch-heads/7151@{#1757}) on port 29462
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-may 23, 2024 9:26:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+ChromeDriver was started successfully on port 29462.
+may 29, 2025 4:50:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page]
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page]
@@ -109,39 +291,31 @@ INFORMACIÓN: Detected dialect: W3C
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password]]
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@47f563cb
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@43a415c4
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@721b928a
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@c214f01
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1f799602
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@3923eb91
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@10443d4
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@469551b8
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@55648de8
 [Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita ]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@5b711e34
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita ]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@ce61735
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita , pepito enters 'Solicito por favor, se me agende de manera urgente una cita con medico general con fecha maximo para el 18 de Mayo.' into Escribir un comentario ]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4600c0da
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita , pepito enters 'Solicito por favor, se me agende de manera urgente una cita con medico general con fecha maximo para el 18 de Mayo.' into Escribir un comentario , pepito clicks on Clic boton seleccionar cita ]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita , pepito enters 'Solicito por favor, se me agende de manera urgente una cita con medico general con fecha maximo para el 18 de Mayo.' into Escribir un comentario , pepito clicks on Clic boton seleccionar cita ]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita , pepito enters 'Solicito por favor, se me agende de manera urgente una cita con medico general con fecha maximo para el 18 de Mayo.' into Escribir un comentario , pepito clicks on Clic boton seleccionar cita ]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@5dc27712
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@19ae6fd2
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita , pepito enters 'Solicito por favor, se me agende de manera urgente una cita con medico general con fecha maximo para el 18 de Mayo.' into Escribir un comentario , pepito clicks on Clic boton seleccionar cita ]], Entonces debera visualizar un mensaje de confirmacion de la cita [Then El suario puede ver un mensaje de comprobacion should be (true)]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita , pepito enters 'Solicito por favor, se me agende de manera urgente una cita con medico general con fecha maximo para el 18 de Mayo.' into Escribir un comentario , pepito clicks on Clic boton seleccionar cita ]], Entonces debera visualizar un mensaje de confirmacion de la cita [Then El suario puede ver un mensaje de comprobacion should be (true)]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - testFinished: Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita , pepito enters 'Solicito por favor, se me agende de manera urgente una cita con medico general con fecha maximo para el 18 de Mayo.' into Escribir un comentario , pepito clicks on Clic boton seleccionar cita ]], Entonces debera visualizar un mensaje de confirmacion de la cita [Then El suario puede ver un mensaje de comprobacion should be (true)]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - TestOutcomes: [Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita , pepito enters 'Solicito por favor, se me agende de manera urgente una cita con medico general con fecha maximo para el 18 de Mayo.' into Escribir un comentario , pepito clicks on Clic boton seleccionar cita ]], Entonces debera visualizar un mensaje de confirmacion de la cita [Then El suario puede ver un mensaje de comprobacion should be (true)]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - Final testOutcomes: [Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita , pepito enters 'Solicito por favor, se me agende de manera urgente una cita con medico general con fecha maximo para el 18 de Mayo.' into Escribir un comentario , pepito clicks on Clic boton seleccionar cita ]], Entonces debera visualizar un mensaje de confirmacion de la cita [Then El suario puede ver un mensaje de comprobacion should be (true)]]
-[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
-        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
-  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
- (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
-  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
- (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
-        /_/                                                                
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4a7a91cb
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@543bef77
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - testFinished: Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita ]], Entonces debera visualizar un mensaje de confirmacion de la cita
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - TestOutcomes: [Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita ]], Entonces debera visualizar un mensaje de confirmacion de la cita]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - Final testOutcomes: [Agendamiento de cita exitoso:Dado que el usuario se encuentra en la pagina web de agendamiento de citas [pepito opens the Agendar cita page], Cuando Cuando complete los campos del formulario de agendamiento de citas, realice clic en el boton de reserva de cita [Pepito agendar cita [pepito enters 'John Doe' into Ingresar nombre usuario, pepito enters 'ThisIsNotAPassword' into Ingresar Password, pepito clicks on Clic boton Login, pepito select Hongkong CURA Healthcare Center on seleccion instalacion donde sera atendido, pepito clicks on Clic boton solicitud reingreso hospitalario, pepito clicks on Clic boton seguro de enfermedad, pepito clicks on Ingresar para seleccionar la fecha de visita , pepito clicks on Seleccion fecha de visita ]], Entonces debera visualizar un mensaje de confirmacion de la cita]
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
 
-TEST PASSED: Agendamiento de cita exitoso
-----------------------------------------------------------------------------
+TEST FAILED: Agendamiento de cita exitoso
+--------------------------------------------------------------------------
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP pepito clicks on Seleccion fecha de visita
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected enabled element was not enabled
 </pre>
 </span>
 </div>
@@ -153,7 +327,7 @@ TEST PASSED: Agendamiento de cita exitoso
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 23/05/2024 09:26:34 PM</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 29/05/2025 04:51:08 PM</p>
 </div>
 </div>
 </body>
